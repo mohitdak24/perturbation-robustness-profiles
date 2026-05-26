@@ -1,0 +1,10 @@
+# Noise seeds used in the paper.
+# Each seed deterministically initializes the PyTorch RNG for the noise draw.
+# Global-perturbation conditions (§3.2-3.5): all 5 seeds.
+# Component-level sweep (§3.6, Phase A and Phase B): seed 42 only.
+
+42
+123
+456
+789
+1011

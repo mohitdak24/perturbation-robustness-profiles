@@ -1,0 +1,42 @@
+{
+  "version": "1.0",
+  "status": "stub release; hashes to be committed in full release within 30 days",
+  "frozen_at": "TBD",
+  "artifacts": [
+    {
+      "filename": "mmlu_subset_3000.jsonl",
+      "size_bytes": null,
+      "sha256": "TBD",
+      "row_count": 3000,
+      "provenance": "MMLU (Hendrycks et al., 2021); stratified sample across 57 subjects; sampling seed = 0"
+    },
+    {
+      "filename": "gsm8k_test_500.jsonl",
+      "size_bytes": null,
+      "sha256": "TBD",
+      "row_count": 500,
+      "provenance": "GSM8K (Cobbe et al., 2021); first 500 problems from test split in canonical order"
+    },
+    {
+      "filename": "ifeval_200.jsonl",
+      "size_bytes": null,
+      "sha256": "TBD",
+      "row_count": 200,
+      "provenance": "Google IFEval; 200 prompts from standard release; 22 of 25 constraint verifiers used"
+    },
+    {
+      "filename": "advbench_200.jsonl",
+      "size_bytes": null,
+      "sha256": "TBD",
+      "row_count": 200,
+      "provenance": "AdvBench (Zou et al., 2023); fixed random sample seed = 0 from AdvBench's 520 prompts"
+    },
+    {
+      "filename": "wikitext103_calibration_500.jsonl",
+      "size_bytes": null,
+      "sha256": "TBD",
+      "row_count": 500,
+      "provenance": "WikiText-103; held-out subset of 500 sequences for perplexity calibration"
+    }
+  ]
+}

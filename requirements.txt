@@ -1,0 +1,23 @@
+# Core ML
+torch==2.2.0
+transformers==4.43.3
+accelerate>=0.27.0
+
+# Data handling
+numpy>=1.24,<2.0
+scipy>=1.10
+pandas>=2.0
+datasets>=2.16
+
+# Tokenization
+sentencepiece>=0.1.99
+tokenizers>=0.15
+
+# Utilities
+tqdm>=4.65
+
+# Evaluation
+# IFEval verifiers: run pip install instruction-following-eval
+# MMLU: uses datasets library (above)
+# GSM8K: uses datasets library (above)
+# AdvBench: frozen subset in data/

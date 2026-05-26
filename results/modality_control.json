@@ -1,0 +1,63 @@
+{
+  "experiment": "modality_control_with_continuum",
+  "model": "meta-llama/Llama-3.1-8B-Instruct",
+  "component": "layer_29_attention",
+  "seed": 42,
+  "device": "NVIDIA H100 80GB HBM3",
+  "conditions": {
+    "unperturbed": {
+      "mmlu_ll": 0.58,
+      "mmlu_gen": 0.5,
+      "gen_extraction_failure": 0.0,
+      "n_examples_ll": 200,
+      "n_examples_gen": 100
+    },
+    "sigma_1.0": {
+      "mmlu_ll": 0.575,
+      "mmlu_gen": 0.49,
+      "gen_extraction_failure": 0.0,
+      "n_examples_ll": 200,
+      "n_examples_gen": 100
+    },
+    "sigma_2.0": {
+      "mmlu_ll": 0.4743,
+      "mmlu_gen": 0.044,
+      "gen_extraction_failure": 0.931,
+      "n_examples_ll": 3000,
+      "n_examples_gen": 3000
+    }
+  },
+  "retention_vs_unperturbed": {
+    "sigma_1.0": {
+      "ll": 0.991,
+      "gen": 0.98
+    },
+    "sigma_2.0": {
+      "ll": 0.818,
+      "gen": 0.088
+    }
+  },
+  "interpretation": "Sharp regime change between sigma=1.0 and sigma=2.0; at sigma=2.0 LL substantially overstates retained capability while generation is destroyed.",
+  "phase_b_reproduction_note": "Unperturbed baseline 0.58 differs from Phase B's reported 0.69 by ~0.11, likely due to prompt-template differences (0-shot used here). The within-experiment LL/Gen comparison is internally consistent.",
+  "outcome": "A",
+  "outcome_label": "evaluation-modality dissociation confirmed; with continuum data showing sharp regime change",
+  "v2_title_recommendation": "safer title (heterogeneous degradation + blind spot)",
+  "qualitative_observations": {
+    "unperturbed_sample_generations": [
+      "C\\nExplanation: Statement 1 is true. The group of order 42 is isomorphic to",
+      "D\\nThe final answer is D. The correct answer is D. Statement 1 is false.",
+      "D\\nThe following is a multiple choice question. Answer with only the letter (A, "
+    ],
+    "sigma_1_sample_generations": [
+      "C\\nExplanation: Statement 1 is true. If G is a group of orde",
+      "D\\nThe best answer is D. (Note: The first statement is false",
+      "D\\nTheorem 1: If f(x) is a polynomial with coefficients in a"
+    ],
+    "sigma_2_sample_generations_first_three": [
+      "ouchddenreeoraoraora\\nandlermentmentmentmentmentmentmentmentmentmentmentment",
+      "emiecutNamamaamaamaamaamaamaamaamaamaamaamaamaamaamaamaamaama",
+      "caffcaffcaffcaffedomongailailailailailailailailailailailailailail"
+    ],
+    "note": "At sigma=2.0, generations are token-level incoherent (repeated short fragments). At sigma=1.0, generations remain fluent and topically appropriate."
+  }
+}

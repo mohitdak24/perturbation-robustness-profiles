@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite the preprint below."
+type: software
+title: "Perturbation Robustness Profiles Reveal Heterogeneous Capability Degradation and an Evaluation-Modality Blind Spot in Instruction-Tuned Language Models"
+version: "2.1"
+date-released: "2026-05-26"
+authors:
+  - family-names: "Badkur"
+    given-names: "Prashi"
+    affiliation: "London Business School; IIT Bombay"
+  - family-names: "Dak"
+    given-names: "Mohit"
+    affiliation: "Columbia Business School; BITS Pilani"
+preferred-citation:
+  type: article
+  title: "Perturbation Robustness Profiles Reveal Heterogeneous Capability Degradation and an Evaluation-Modality Blind Spot in Instruction-Tuned Language Models"
+  authors:
+    - family-names: "Badkur"
+      given-names: "Prashi"
+      affiliation: "London Business School; IIT Bombay"
+    - family-names: "Dak"
+      given-names: "Mohit"
+      affiliation: "Columbia Business School; BITS Pilani"
+  year: 2026
+  publisher: "Zenodo"
+  doi: "TBD"
+  note: "Preprint v2.1, May 2026"
